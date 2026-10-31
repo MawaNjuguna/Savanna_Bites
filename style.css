@@ -1,0 +1,432 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+     font-family: 'Times New Roman', Times, serif;
+    background-color:#fff8ed;
+    color: #29251f;
+}
+/*navigation bar*/
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 20px 7%;
+    background-color: #fff8ed;
+    border-bottom: 1px solid #f0e5d5;
+}
+.logo{
+    color: #29251f;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.logo span{
+    color: #f06432;
+}
+.logo small{
+    display: block;
+    margin-top: 5px;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    color: #777;
+}
+/*navigation links*/
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.nav-links a{
+    position:relative;
+    color: #29251f;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+/*hover effect*/
+.nav-links a:hover{
+    color: #f06432;
+}
+
+/*orange unerline*/
+.nav-links a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background-color: #f06432;
+    transition: width 0.3s;
+}
+.nav-links a:hover::after,
+.nav-links a.active::after{
+    width: 100px;
+}
+/*contact button*/
+.nav-button{
+    background-color: #f06432;
+    color: white;
+    text-decoration: none;
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+.nav-button:hover{
+    background-color: #c94b22;
+}
+/*smaller screens*/
+@media(max-width: 800px){
+    .navbar{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .nav-links{
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 24px;
+        padding-top: 10px;
+    }
+}
+/*phone screen*/
+@media(max-width:450px){
+    .navbar{
+        padding: 18px 5%;
+        gap: 15px;
+    }
+    .logo{
+        font-size: 21px;
+    }
+    .logo small{
+        font-size: 8px;
+        letter-spacing: 1px;
+    }
+    .nav-button{
+        padding: 10px;
+        font-size: 12px;
+    }
+    .nav-links{
+        gap: 18px;
+    }
+    .nav-links a{
+        font-size: 13px;
+    }
+}
+
+.home{
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 50px 7%;
+    background-color: #fff0d9;
+}
+.home-text{
+    flex: 1;
+}
+.welcome{
+    color: #f06432;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+.home h1{
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+.description{
+    color: #777;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    max-width: 420px;
+}
+.btn{
+    display: inline-block;
+    background-color: #f06432;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+.btn:hover{
+    background-color: #c94b22;
+}
+.home-image img{
+    width: 100%;
+    max-width: 500px;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+/*menu section*/
+.menu-section{
+    padding: 80px 7%;
+    background-color: #fff8ed;
+}
+/*menu heading*/
+.section-heading{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.section-heading h2{
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+.section-heading h2 span{
+    color: #f06432;
+}
+.section-heading >p:last-child{
+    color: #777;
+}
+/*food card layout*/
+.menu-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+/*individual food card*/
+.food-card{
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px #00000012;
+    transition: transform 0.3s;
+}
+    .food-card:hover{
+    transform: translate(-8px);
+}
+/*food image*/
+.food-card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+ 
+/*food details*/
+.food-info{
+    padding: 22px;
+}
+.food-info h3{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.food-info p{
+    color: #777;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 48px;
+}
+/*price and order link*/
+.food-price{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+.food-price strong{
+    color: #f06432;
+    font-size: 18px;
+}
+.food-price a{
+    text-decoration: none;
+    background-color: #f06432;
+    color: white;
+    padding: 9px 13px;
+    border-radius: 6px;
+    font-size: 13px;
+}
+.food-price a:hover{
+    background-color: #c94b22;
+}
+/*menu layout on smaller screens*/
+@media (max-width: 750px){
+    .menu-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .section-heading h2 {
+        font-size: 30px;
+    }
+}
+/*ABOUT SECTION*/
+.about-section{
+    display: flex;
+    align-items: center;
+    gap: 55px;
+    padding: 80px 7%;
+}
+.about-image{
+    flex: 1;
+}
+.about-image img{
+    width:100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+}   
+/*about text*/
+.about-text{
+    flex: 1;
+}
+.about-text h2{
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+.about-text h2 span{
+    color: #f06432;
+}
+.about-text > p:not(.welcome){
+    color: #777;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+/*Button spacing*/
+.about-text.btn{
+    margin-top: 12px;
+}
+/*responsive layout*/
+@media(max-width: 650px){
+    .about-section{
+        flex-direction: column;
+        gap: 30px;
+        padding: 55px 7%;
+    }
+    .about-image,
+    .about-text{
+        width: 100%;
+    }
+    .about-image img{
+        height: 260px;
+    }
+    .about-text h2{
+        font-size: 34px;
+    }
+}
+/*contact section*/
+.contact-section{
+    padding: 80px 7%;
+    background-color: #fff8ed;
+}
+.contact-section .section-heading{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.contact-section .section-heading h2{
+    font-size: 36px;
+    color: #29251f;
+    margin: 12px 0;
+}
+.contact-section .section-heading h2 span{
+    color: #f06432;
+}
+.contact-container{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-items: start;
+}
+.contact-info,
+.contact-form{
+    background-color: white;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+.contact-info h3,
+.contact-form h3{
+    color: #29251f;
+    font-size: 22px;
+    margin: 0 0 15px;
+}
+.contact-info > p{
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 24px;
+}
+.contact-item > span{
+    background-color: #fff0df;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.contact-item h4{
+    margin: 3px 0 6px;
+    color: #29251f;
+}
+.contact-item p{
+    margin: 0;
+    color: #777;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 14px;
+    border: 1px solid #e5ddd2;
+    border-radius: 8px;
+    background-color: #fffdf9;
+    font: inherit;
+    font-size: 14px;
+    outline: none;
+}
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color: #f06432;
+}
+.contact-form textarea{
+    resize: vertical;
+    margin-bottom: 20px;
+}
+.contact-form .btn{
+    border: none;
+    cursor: pointer;
+    align-self: flex-start;
+}
+@media(max-width: 750px){
+    .contact-section{
+        padding: 55px 5%;
+    }
+    .about-section .section-heading h2{
+        font-size: 28px;
+    }
+    .contact-container{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    .contact-info,
+    .contact-form{
+        padding: 22px;
+    }
+}
