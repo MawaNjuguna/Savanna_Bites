@@ -85,6 +85,21 @@ body{
 .nav-button:hover{
     background-color: #c94b22;
 }
+/*cart button*/
+.cart-button{
+    background-color: #f06432;
+    color: white;
+    text-decoration: none;
+    padding: 12px 17px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+.cart-button:hover{
+    background-color: #c94b22;
+}
 /*smaller screens*/
 @media(max-width: 800px){
     .navbar{
