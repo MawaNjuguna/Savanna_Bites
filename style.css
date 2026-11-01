@@ -485,3 +485,20 @@ body{
     font-size: 22px;
     margin-top: 25px;
 }
+/* ADD TO CART BUTTONS */
+.menu-card button {
+    background-color: #f06432;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.menu-card button:hover {
+    background-color: #d94d20;
+    transform: scale(1.05);
+}
