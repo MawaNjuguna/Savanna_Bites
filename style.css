@@ -492,13 +492,13 @@ body{
     border: none;
     padding: 12px 22px;
     border-radius: 25px;
-    font-size: 15px;
+    font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
 }
 
 .menu-card button:hover {
-    background-color: #d94d20;
+    background-color:  #c94b22;
     transform: scale(1.05);
 }
